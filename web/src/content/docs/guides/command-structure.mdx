@@ -1,0 +1,144 @@
+---
+title: Command Structure
+---
+
+import {
+  Tabs, TabItem, Code, Aside, Card, CardGrid, FileTree
+} from '@astrojs/starlight/components';
+
+## Custom Command
+Our approach is that you can set all properties as you like, even the function where you store the code to execute the command, completely customizable, but avoid touching everything that is already declared in the [Command class](/reference/classes/command/).
+
+<Tabs syncKey="language-select">
+  <TabItem label="TypeScript" icon="seti:typescript">
+```ts copy wrap twoslash title="my.command.ts"
+import { Command, type CommandOptions } from "@vimn/uncmd"
+// ---cut---
+export class MyCommand<
+	Options extends CommandOptions & { 
+    code: (/* Type definitions of your arguments */) => unknown 
+  }
+> extends Command<Options> {
+	code: (/* Type definitions of your arguments */) => unknown;
+	constructor(options: Options) {
+		super(options);
+		this.code = options.code;
+	}
+}
+```
+  </TabItem>
+  <TabItem label="JavaScript" icon="seti:javascript">
+```js copy wrap twoslash title="myCommand.js"
+import { Command } from "@vimn/uncmd"
+// ---cut---
+exports.MyCommand = class MyCommand extends Command {
+	constructor(options) {
+		super(options);
+		this.code = options.code;
+	}
+}
+```
+  </TabItem>
+</Tabs>
+
+In this example we set a custom property, `code`, which is a function, now, you can set any property you like, for example, an array of ids. Below is an example.
+
+<Tabs syncKey="language-select">
+  <TabItem label="TypeScript" icon="seti:typescript">
+```ts copy wrap twoslash title="my.command.ts"
+import { Command, type CommandOptions } from "@vimn/uncmd"
+// ---cut---
+export class MyCommand<
+	Options extends CommandOptions & {
+    code: (/* Type definitions of your arguments */) => unknown; 
+    ids: string[] 
+  }
+> extends Command<Options> {
+  ids: string[]
+	code: (/* Type definitions of your arguments */) => unknown;
+	constructor(options: Options) {
+		super(options);
+		this.ids = options.ids;
+		this.code = options.code;
+	}
+}
+```
+  </TabItem>
+  <TabItem label="JavaScript" icon="seti:javascript">
+```js copy wrap twoslash title="myCommand.js"
+import { Command } from "@vimn/uncmd"
+// ---cut---
+exports.MyCommand = class MyCommand extends Command {
+	constructor(options) {
+		super(options);
+		this.ids = options.ids;
+		this.code = options.code;
+	}
+}
+```
+  </TabItem>
+</Tabs>
+
+## Your First Command
+Just now we will see how you can use your `MyCommand` class.
+<Tabs syncKey="language-select">
+  <TabItem label="TypeScript" icon="seti:typescript">
+```ts copy wrap twoslash title="my.first.command.ts" showLineNumbers {"These are customized properties":6-8}
+import { Command, type CommandOptions } from "@vimn/uncmd"
+
+export class MyCommand<
+	Options extends CommandOptions & {
+    ids: string[]
+	  code: () => unknown;
+  }
+> extends Command<Options> {
+  /**
+   * This is a custom property in the class, the example of how to set them is just above
+  */
+  ids: string[]
+  /**
+   * This is a custom function in the class, the example of how to set them is just above
+  */
+	code: () => unknown;
+	constructor(options: Options) {
+		super(options);
+		this.ids = options.ids;
+		this.code = options.code;
+	}
+}
+// ---cut---
+export default new MyCommand({
+	data: {
+		name: 'test',
+		description: 'Just a test command'
+	},
+
+	ids: [ /* Some IDS */ ],
+	code(/* Command's params */) { /* Command's code */ }
+});
+```
+  </TabItem>
+  <TabItem label="JavaScript" icon="seti:javascript">
+```js copy wrap twoslash title="myFirstCommand.js" showLineNumbers {"These are customized properties":6-8}
+import { Command } from "@vimn/uncmd";
+
+exports.MyCommand = class MyCommand extends Command {
+	constructor(options) {
+		super(options);
+		this.ids = options.ids;
+		this.code = options.code;
+	}
+}
+// ---cut---
+exports.default = new MyCommand({
+	data: {
+		name: 'test',
+		description: 'Just a test command'
+	},
+
+	ids: [ /* Some IDS */ ],
+	code(/* Command's params */) { /* Command's code */ }
+});
+```
+  </TabItem>
+</Tabs>

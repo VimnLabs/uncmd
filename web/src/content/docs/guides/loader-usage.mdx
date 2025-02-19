@@ -1,0 +1,60 @@
+---
+title: Loader usage
+description: Let's see how to use our loader
+---
+import {
+  Tabs, TabItem, Code, LinkCard, FileTree
+} from '@astrojs/starlight/components';
+
+The usage is extremely simple, here we will show you how to use it, regardless of whether it is TypeScript or JavaScript.
+
+## Loader Usage
+```js copy wrap twoslash showLineNumbers
+import { Loader } from "@vimn/uncmd"
+// ---cut---
+const loader = new Loader({
+  /**
+   * Here are the file extensions of your commands, for example: “ts”, “js”, “cjs” or “mjs”.
+   * It is not necessary to specify all those files, actually just use the same extension as your index.
+  */
+	extensions: [ /* File extensions */ ],
+	path: './commands',
+	bot: {
+		id: process.env['BOT_ID'],
+		token: process.env['BOT_TOKEN']
+	}
+});
+```
+
+This is included in your index, in a function, or wherever, as long as the file containing this is executed, everything will work.
+So as you may have noticed, you can use this code whatever you use, whether it is a `.ts`, `.js`, `.cjs` or `.mjs` file.
+
+## Example of your files
+Suppose I put this in the index, now, your files should look something like this:
+
+(Remember to choose the example based on whether you are using JavaScript or TypeScript)
+<Tabs syncKey="language-select">
+  <TabItem label="TypeScript" icon="seti:typescript">
+<FileTree>
+- package.json
+- tsconfig.json
+- src
+  - index.ts
+  - commands
+    - ...
+</FileTree>
+  </TabItem>
+  <TabItem label="JavaScript" icon="seti:javascript">
+<FileTree>
+- package.json
+- src
+  - index.js
+  - commands
+    - ...
+</FileTree>
+  </TabItem>
+</Tabs>
+
+## Congratulations!
+Now you can use the loader, if you haven't seen how to create commands yet go and check it out:
+<LinkCard title="How to create a command" href="/guides/command-structure" />

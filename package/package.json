@@ -1,0 +1,44 @@
+{
+  "name": "@vimn/uncmd",
+  "version": "1.0.6",
+  "description": "Unify all your commands, facilitate and optimize maintainability.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VimnLabs/UnCMD.git"
+  },
+  "keywords": [
+    "discord",
+    "application-command",
+    "api",
+    "utils"
+  ],
+  "author": "KingsBeCattz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VimnLabs/UnCMD/issues"
+  },
+  "homepage": "https://github.com/VimnLabs/UnCMD#readme",
+  "dependencies": {
+    "discord-api-types": "^0.37.119"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.2",
+    "@types/node": "^22.13.1",
+    "unbuild": "^3.3.1"
+  }
+}

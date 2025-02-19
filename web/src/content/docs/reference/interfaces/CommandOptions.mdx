@@ -1,0 +1,98 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "CommandOptions"
+---
+
+Defined in: package/src/types.ts:33
+
+Represents the options for creating a command
+
+## Properties
+
+### data
+
+```ts
+data: CommandData;
+```
+
+Defined in: package/src/types.ts:37
+
+Data to upload the command
+
+***
+
+### options?
+
+```ts
+optional options: APIApplicationCommandOption[];
+```
+
+Defined in: package/src/types.ts:43
+
+Options to upload commands, this must be a fix and is only available for chat commands.
+
+https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure
+
+***
+
+### type?
+
+```ts
+optional type: ApplicationCommandType;
+```
+
+Defined in: package/src/types.ts:49
+
+Type of command, defaults to `1`
+
+https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types
+
+***
+
+### nsfw?
+
+```ts
+optional nsfw: boolean;
+```
+
+Defined in: package/src/types.ts:53
+
+Indicates whether the command is age-restricted, defaults to `false`
+
+***
+
+### guilds?
+
+```ts
+optional guilds: string[];
+```
+
+Defined in: package/src/types.ts:57
+
+Sets whether the command is to be uploaded only to one or several guilds by its id
+
+***
+
+### integration\_types?
+
+```ts
+optional integration_types: ApplicationIntegrationType[];
+```
+
+Defined in: package/src/types.ts:61
+
+Installation context(s) where the command is available, only for globally-scoped commands. Defaults to `GUILD_INSTALL ([0])`
+
+***
+
+### contexts?
+
+```ts
+optional contexts: null | InteractionContextType[];
+```
+
+Defined in: package/src/types.ts:68
+
+Interaction context(s) where the command can be used, only for globally-scoped commands. By default, all interaction context types included for new commands `[0,1,2]`.

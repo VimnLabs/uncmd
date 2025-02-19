@@ -1,0 +1,226 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "Loader"
+---
+
+Defined in: package/src/classes/generic.loader.ts:46
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`C` *extends* [`Command`](/reference/classes/command/)\<[`CommandOptions`](/reference/interfaces/commandoptions/)\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Constructors
+
+### new Loader()
+
+```ts
+new Loader<C>(options): Loader<C>
+```
+
+Defined in: package/src/classes/generic.loader.ts:58
+
+Create a new instance to load the commands.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`options`
+
+</td>
+<td>
+
+[`LoaderOptions`](/reference/interfaces/loaderoptions/)
+
+</td>
+<td>
+
+Options for the loader
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`Loader`](/reference/classes/loader/)\<`C`\>
+
+## Properties
+
+### cache
+
+```ts
+readonly cache: Dictionary<string, C>;
+```
+
+Defined in: package/src/classes/generic.loader.ts:48
+
+Dictionary to store commands
+
+***
+
+### extensions
+
+```ts
+readonly extensions: RegExp;
+```
+
+Defined in: package/src/classes/generic.loader.ts:50
+
+File extensions to load
+
+***
+
+### bot
+
+```ts
+readonly bot: object;
+```
+
+Defined in: package/src/classes/generic.loader.ts:52
+
+The necessary bot information for the commands to be uploaded
+
+#### token
+
+```ts
+token: string;
+```
+
+#### id
+
+```ts
+id: string;
+```
+
+***
+
+### options
+
+```ts
+options: LoaderOptions;
+```
+
+Defined in: package/src/classes/generic.loader.ts:60
+
+Options for the loader
+
+## Methods
+
+### load()
+
+```ts
+load(registerCallback, endCallback): void
+```
+
+Defined in: package/src/classes/generic.loader.ts:97
+
+It loads and register absolutely all commands in the specified folder, it is recursive, i.e. it enters into folders
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`registerCallback`
+
+</td>
+<td>
+
+(`command`, `dict`) => `any`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`endCallback`
+
+</td>
+<td>
+
+(`dict`) => `any`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`void`
+
+***
+
+### upload()
+
+```ts
+upload(callback): void
+```
+
+Defined in: package/src/classes/generic.loader.ts:113
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`global`?, `guild`?) => `unknown`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`void`

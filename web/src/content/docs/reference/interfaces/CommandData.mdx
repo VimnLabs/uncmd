@@ -1,0 +1,90 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "CommandData"
+---
+
+Defined in: package/src/types.ts:24
+
+Data to upload the command
+
+## Extends
+
+- `Pick`\<`APIApplicationCommand`, 
+  \| `"name"`
+  \| `"description"`
+  \| `"name_localizations"`
+  \| `"description_localizations"`\>
+
+## Properties
+
+### name
+
+```ts
+name: string;
+```
+
+Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:35
+
+1-32 character name; `CHAT_INPUT` command names must be all lowercase matching `^[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}$`
+
+#### Inherited from
+
+```ts
+Pick.name
+```
+
+***
+
+### name\_localizations?
+
+```ts
+optional name_localizations: null | Partial<Record<Locale, null | string>>;
+```
+
+Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:39
+
+Localization dictionary for the name field. Values follow the same restrictions as name
+
+#### Inherited from
+
+```ts
+Pick.name_localizations
+```
+
+***
+
+### description
+
+```ts
+description: string;
+```
+
+Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:47
+
+1-100 character description for `CHAT_INPUT` commands, empty string for `USER` and `MESSAGE` commands
+
+#### Inherited from
+
+```ts
+Pick.description
+```
+
+***
+
+### description\_localizations?
+
+```ts
+optional description_localizations: null | Partial<Record<Locale, null | string>>;
+```
+
+Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:51
+
+Localization dictionary for the description field. Values follow the same restrictions as description
+
+#### Inherited from
+
+```ts
+Pick.description_localizations
+```

@@ -1,0 +1,242 @@
+---
+editUrl: false
+next: false
+prev: false
+title: "Command"
+---
+
+Defined in: package/src/classes/abstract.command.ts:29
+
+Represents an abstract class of a command.
+
+This is intended to be extended with other things including the function to execute the command, i.e. `code(...)`, `exec(...)`, etc.
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Options` *extends* [`CommandOptions`](/reference/interfaces/commandoptions/)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Constructors
+
+### new Command()
+
+```ts
+new Command<Options>(options): Command<Options>
+```
+
+Defined in: package/src/classes/abstract.command.ts:62
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`options`
+
+</td>
+<td>
+
+`Options`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`Command`](/reference/classes/command/)\<`Options`\>
+
+## Properties
+
+### data
+
+```ts
+data: Options["data"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:33
+
+Data to upload the command, like the name, the description and the localized names and descriptions
+
+***
+
+### options?
+
+```ts
+optional options: Options["options"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:39
+
+Options to upload commands, this must be a fix and is only available for chat commands.
+
+https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure
+
+***
+
+### type
+
+```ts
+type: Options["type"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:45
+
+Type of command, defaults to `1`
+
+https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types
+
+***
+
+### nsfw?
+
+```ts
+optional nsfw: Options["nsfw"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:49
+
+Indicates whether the command is age-restricted, defaults to `false`
+
+***
+
+### guilds?
+
+```ts
+optional guilds: string[];
+```
+
+Defined in: package/src/classes/abstract.command.ts:53
+
+Sets whether the command is to be uploaded only to one or several guilds by its id
+
+***
+
+### integration\_types?
+
+```ts
+optional integration_types: Options["integration_types"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:57
+
+Installation context(s) where the command is available, only for globally-scoped commands. Defaults to `GUILD_INSTALL ([0])`
+
+***
+
+### contexts?
+
+```ts
+optional contexts: Options["contexts"];
+```
+
+Defined in: package/src/classes/abstract.command.ts:61
+
+Interaction context(s) where the command can be used, only for globally-scoped commands. By default, all interaction context types included for new commands `[0,1,2]`.
+
+## Methods
+
+### toJSON()
+
+```ts
+toJSON(): RESTPostAPIApplicationCommandsJSONBody
+```
+
+Defined in: package/src/classes/abstract.command.ts:78
+
+Convert the class so that it is suitable for uploading to the api.
+
+Preferably, do not modify this function
+
+#### Returns
+
+`RESTPostAPIApplicationCommandsJSONBody`
+
+JSON to be uploaded to the api
+
+***
+
+### isChatInput()
+
+```ts
+isChatInput(): this is Command<Omit<Options, "type"> & { type: ChatInput }>
+```
+
+Defined in: package/src/classes/abstract.command.ts:102
+
+Checks if it is a text-based command that shows up when a user types `/`.
+
+#### Returns
+
+`this is Command<Omit<Options, "type"> & { type: ChatInput }>`
+
+***
+
+### isMessage()
+
+```ts
+isMessage(): this is Command<Omit<Options, "type"> & { type: Message }>
+```
+
+Defined in: package/src/classes/abstract.command.ts:111
+
+Checks if it is a UI-based command that shows up when you right click or tap on a message.
+
+#### Returns
+
+`this is Command<Omit<Options, "type"> & { type: Message }>`
+
+***
+
+### isPrimaryEntryPoint()
+
+```ts
+isPrimaryEntryPoint(): this is Command<Omit<Options, "type"> & { type: PrimaryEntryPoint }>
+```
+
+Defined in: package/src/classes/abstract.command.ts:120
+
+Checks if it is a UI-based command that represents the primary way to invoke an app's Activity.
+
+#### Returns
+
+`this is Command<Omit<Options, "type"> & { type: PrimaryEntryPoint }>`
+
+***
+
+### isUser()
+
+```ts
+isUser(): this is Command<Omit<Options, "type"> & { type: User }>
+```
+
+Defined in: package/src/classes/abstract.command.ts:129
+
+Checks if it is a UI-based command that shows up when you right click or tap on a user.
+
+#### Returns
+
+`this is Command<Omit<Options, "type"> & { type: User }>`

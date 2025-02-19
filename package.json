@@ -1,0 +1,13 @@
+{
+  "name": "uncmd-monorepo",
+  "version": "0.0.1",
+  "description": "Monorepo of @vimn/uncmd",
+  "scripts": {
+    "update": "powershell -Command { ./scripts/update.sh }"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.2",
+    "@types/node": "^22.13.1",
+    "unbuild": "^3.3.1"
+  }
+}
