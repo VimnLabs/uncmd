@@ -15,7 +15,7 @@
     "@heroui/react": "^2.6.14",
     "@types/react": "^19.0.9",
     "@types/react-dom": "^19.0.3",
-    "@vimn/uncmd": "1.0.0",
+    "@vimn/uncmd": "^1.0.0",
     "astro": "^5.1.5",
     "astro-expressive-code": "^0.40.2",
     "expressive-code-twoslash": "^0.4.0",
