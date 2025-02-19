@@ -15,7 +15,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			credits: true,
-			favicon: '/public/favicon.svg',
+			favicon: '/favicon.svg',
 			title: 'UnCommand',
 			logo: {
 				src: './src/assets/small-vimn-v-mark.svg'
