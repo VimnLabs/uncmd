@@ -28,29 +28,6 @@ export default defineConfig({
 			},
 			customCss: ['/src/styles/global.css'],
 			plugins: [
-				/**
-            ion({
-                icons: { iconDir: './src/assets/icons' },
-                overrides: {
-                    Sidebar: false
-                },
-                footer: {
-                    text: '©️ VimnLabs 2025',
-                    links: [
-                        {
-                            text: 'Homepage',
-                            href: '/'
-                        }
-                    ],
-                    icons: [
-                        {
-                            name: 'github',
-                            href: 'https://github.com/VimnLabs/UnCMD'
-                        }
-                    ]
-                }
-            }),
-             */
 				starlightSidebarTopics([
 					{
 						label: 'Guides',
