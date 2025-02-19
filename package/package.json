@@ -1,6 +1,6 @@
 {
   "name": "@vimn/uncmd",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "Unify all your commands, facilitate and optimize maintainability.",
   "type": "module",
   "exports": {
@@ -40,5 +40,8 @@
     "@types/bun": "^1.2.2",
     "@types/node": "^22.13.1",
     "unbuild": "^3.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
