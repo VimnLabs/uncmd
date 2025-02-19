@@ -14,8 +14,6 @@ export default defineConfig({
 	base: 'uncmd/',
 	integrations: [
 		starlight({
-			credits: true,
-			favicon: '/favicon.svg',
 			title: 'UnCommand',
 			logo: {
 				src: './src/assets/small-vimn-v-mark.svg'
