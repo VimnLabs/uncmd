@@ -10,6 +10,8 @@ const [typeDoc, typeDocSidebarGroup] = createStarlightTypeDocPlugin();
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://vimnlabs.github.io',
+	base: 'uncmd/',
 	redirects: { '/[...slug]': '/' },
 	integrations: [
 		starlight({
