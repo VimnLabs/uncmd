@@ -27,5 +27,6 @@
     "starlight-package-managers": "^0.10.0",
     "starlight-sidebar-topics": "^0.3.0",
     "starlight-typedoc": "^0.18.0"
-  }
+  },
+  "packageManager": "pnpm@10.4.0"
 }
