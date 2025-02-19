@@ -12,7 +12,6 @@ const [typeDoc, typeDocSidebarGroup] = createStarlightTypeDocPlugin();
 export default defineConfig({
 	site: 'https://vimnlabs.github.io',
 	base: 'uncmd/',
-	redirects: { '/[...slug]': '/' },
 	integrations: [
 		starlight({
 			title: 'UnCommand',
