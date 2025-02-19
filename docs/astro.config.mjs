@@ -16,7 +16,7 @@ export default defineConfig({
 		starlight({
 			title: 'UnCommand',
 			logo: {
-				src: './src/assets/small-vimn-v-mark.svg'
+				src: './public/favicon.svg'
 			},
 			social: {
 				github: 'https://github.com/VimnLabs/UnCMD',
@@ -49,7 +49,14 @@ export default defineConfig({
 					{
 						label: 'Source Code',
 						link: 'https://github.com/VimnLabs/UnCMD',
-						icon: 'github'
+						icon: 'github',
+						badge: { text: 'External', variant: 'note' }
+					},
+					{
+						label: 'NPM',
+						link: 'https://www.npmjs.com/package/@vimn/uncmd',
+						icon: 'seti:npm',
+						badge: { text: 'External', variant: 'note' }
 					}
 				]),
 				typeDoc({

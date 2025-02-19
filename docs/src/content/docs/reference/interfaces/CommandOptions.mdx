@@ -5,7 +5,7 @@ prev: false
 title: "CommandOptions"
 ---
 
-Defined in: package/src/types.ts:33
+Defined in: [package/src/types.ts:33](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L33)
 
 Represents the options for creating a command
 
@@ -17,7 +17,7 @@ Represents the options for creating a command
 data: CommandData;
 ```
 
-Defined in: package/src/types.ts:37
+Defined in: [package/src/types.ts:37](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L37)
 
 Data to upload the command
 
@@ -26,10 +26,10 @@ Data to upload the command
 ### options?
 
 ```ts
-optional options: APIApplicationCommandOption[];
+optional options: any;
 ```
 
-Defined in: package/src/types.ts:43
+Defined in: [package/src/types.ts:43](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L43)
 
 Options to upload commands, this must be a fix and is only available for chat commands.
 
@@ -40,10 +40,10 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 ### type?
 
 ```ts
-optional type: ApplicationCommandType;
+optional type: any;
 ```
 
-Defined in: package/src/types.ts:49
+Defined in: [package/src/types.ts:49](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L49)
 
 Type of command, defaults to `1`
 
@@ -54,10 +54,10 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 ### nsfw?
 
 ```ts
-optional nsfw: boolean;
+optional nsfw: any;
 ```
 
-Defined in: package/src/types.ts:53
+Defined in: [package/src/types.ts:53](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L53)
 
 Indicates whether the command is age-restricted, defaults to `false`
 
@@ -66,10 +66,10 @@ Indicates whether the command is age-restricted, defaults to `false`
 ### guilds?
 
 ```ts
-optional guilds: string[];
+optional guilds: Snowflake[];
 ```
 
-Defined in: package/src/types.ts:57
+Defined in: [package/src/types.ts:57](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L57)
 
 Sets whether the command is to be uploaded only to one or several guilds by its id
 
@@ -78,10 +78,10 @@ Sets whether the command is to be uploaded only to one or several guilds by its 
 ### integration\_types?
 
 ```ts
-optional integration_types: ApplicationIntegrationType[];
+optional integration_types: any;
 ```
 
-Defined in: package/src/types.ts:61
+Defined in: [package/src/types.ts:61](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L61)
 
 Installation context(s) where the command is available, only for globally-scoped commands. Defaults to `GUILD_INSTALL ([0])`
 
@@ -90,9 +90,9 @@ Installation context(s) where the command is available, only for globally-scoped
 ### contexts?
 
 ```ts
-optional contexts: null | InteractionContextType[];
+optional contexts: any;
 ```
 
-Defined in: package/src/types.ts:68
+Defined in: [package/src/types.ts:68](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L68)
 
 Interaction context(s) where the command can be used, only for globally-scoped commands. By default, all interaction context types included for new commands `[0,1,2]`.

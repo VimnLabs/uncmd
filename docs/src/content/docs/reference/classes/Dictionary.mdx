@@ -5,7 +5,7 @@ prev: false
 title: "Dictionary"
 ---
 
-Defined in: package/src/classes/dictionary.ts:24
+Defined in: [package/src/classes/dictionary.ts:24](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L24)
 
 ## Extends
 
@@ -45,7 +45,7 @@ Defined in: package/src/classes/dictionary.ts:24
 new Dictionary<K, V>(entries?): Dictionary<K, V>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:50
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:50
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/li
 
 #### Returns
 
-[`Dictionary`](/reference/classes/dictionary/)\<`K`, `V`\>
+[`Dictionary`](/uncmd/reference/classes/dictionary/)\<`K`, `V`\>
 
 #### Inherited from
 
@@ -88,7 +88,7 @@ Map<K, V>.constructor
 new Dictionary<K, V>(iterable?): Dictionary<K, V>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:49
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:49
 
 #### Parameters
 
@@ -117,7 +117,7 @@ Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/li
 
 #### Returns
 
-[`Dictionary`](/reference/classes/dictionary/)\<`K`, `V`\>
+[`Dictionary`](/uncmd/reference/classes/dictionary/)\<`K`, `V`\>
 
 #### Inherited from
 
@@ -133,7 +133,7 @@ Map<K, V>.constructor
 readonly size: number;
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:45
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:45
 
 #### Returns
 
@@ -153,7 +153,7 @@ Map.size
 readonly [toStringTag]: string;
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:137
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:137
 
 #### Inherited from
 
@@ -169,7 +169,7 @@ Map.[toStringTag]
 readonly static [species]: MapConstructor;
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:319
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:319
 
 #### Inherited from
 
@@ -179,416 +179,13 @@ Map.[species]
 
 ## Methods
 
-### filter()
-
-```ts
-filter(callback): Dictionary<K, V>
-```
-
-Defined in: package/src/classes/dictionary.ts:31
-
-Filters the entries of the dictionary based on the provided callback.
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`value`, `key`, `dict`) => `boolean`
-
-</td>
-<td>
-
-A function to test each entry. Returns `true` to keep the entry, `false` otherwise.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-[`Dictionary`](/reference/classes/dictionary/)\<`K`, `V`\>
-
-A new `Dictionary` with the filtered entries.
-
-***
-
-### find()
-
-```ts
-find(callback): undefined | V
-```
-
-Defined in: package/src/classes/dictionary.ts:45
-
-Finds the first value in the dictionary that satisfies the provided callback.
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`value`, `key`, `dict`) => `boolean`
-
-</td>
-<td>
-
-A function to test each entry. Returns `true` for the desired entry.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`undefined` \| `V`
-
-The first value that satisfies the callback, or `undefined` if none do.
-
-***
-
-### every()
-
-```ts
-every(callback): boolean
-```
-
-Defined in: package/src/classes/dictionary.ts:63
-
-Tests whether all entries in the dictionary pass the provided callback.
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`value`, `key`, `dict`) => `boolean`
-
-</td>
-<td>
-
-A function to test each entry. Returns `true` for entries that pass.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`boolean`
-
-`true` if all entries pass the callback, otherwise `false`.
-
-***
-
-### some()
-
-```ts
-some(callback): boolean
-```
-
-Defined in: package/src/classes/dictionary.ts:79
-
-Tests whether at least one entry in the dictionary passes the provided callback.
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`value`, `key`, `dict`) => `boolean`
-
-</td>
-<td>
-
-A function to test each entry. Returns `true` for entries that pass.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`boolean`
-
-`true` if at least one entry passes the callback, otherwise `false`.
-
-***
-
-### reduce()
-
-```ts
-reduce<T>(callback, initial): T
-```
-
-Defined in: package/src/classes/dictionary.ts:96
-
-Reduces the dictionary's entries to a single value using the provided callback.
-
-#### Type Parameters
-
-<table>
-<thead>
-<tr>
-<th>Type Parameter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`T`
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`accumulator`, `value`, `key`, `dict`) => `T`
-
-</td>
-<td>
-
-A function to process each entry.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`initial`
-
-</td>
-<td>
-
-`T`
-
-</td>
-<td>
-
-The initial accumulator value.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`T`
-
-The result of the reduction.
-
-***
-
-### map()
-
-```ts
-map<T>(callback): Dictionary<K, T>
-```
-
-Defined in: package/src/classes/dictionary.ts:112
-
-Maps the dictionary's entries to a new `Dictionary` with transformed values.
-
-#### Type Parameters
-
-<table>
-<thead>
-<tr>
-<th>Type Parameter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`T`
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(`value`, `key`, `dict`) => `T`
-
-</td>
-<td>
-
-A function to transform each entry.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-[`Dictionary`](/reference/classes/dictionary/)\<`K`, `T`\>
-
-A new `Dictionary` with the mapped values.
-
-***
-
-### first()
-
-```ts
-first(): undefined | V
-```
-
-Defined in: package/src/classes/dictionary.ts:125
-
-Retrieves the first value in the dictionary.
-
-#### Returns
-
-`undefined` \| `V`
-
-The first value, or `undefined` if the dictionary is empty.
-
-***
-
-### last()
-
-```ts
-last(): undefined | V
-```
-
-Defined in: package/src/classes/dictionary.ts:134
-
-Retrieves the last value in the dictionary.
-
-#### Returns
-
-`undefined` \| `V`
-
-The last value, or `undefined` if the dictionary is empty.
-
-***
-
-### clone()
-
-```ts
-clone(): Dictionary<K, V>
-```
-
-Defined in: package/src/classes/dictionary.ts:143
-
-Creates a shallow copy of the dictionary.
-
-#### Returns
-
-[`Dictionary`](/reference/classes/dictionary/)\<`K`, `V`\>
-
-A new `Dictionary` instance with the same entries, limit, and name.
-
-***
-
 ### clear()
 
 ```ts
 clear(): void
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:20
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:20
 
 #### Returns
 
@@ -608,7 +205,7 @@ Map.clear
 delete(key): boolean
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:24
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:24
 
 #### Parameters
 
@@ -655,7 +252,7 @@ Map.delete
 forEach(callbackfn, thisArg?): void
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:28
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:28
 
 Executes a provided function once per each key/value pair in the Map, in insertion order.
 
@@ -714,7 +311,7 @@ Map.forEach
 get(key): undefined | V
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:33
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:33
 
 Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
 
@@ -763,7 +360,7 @@ Map.get
 has(key): boolean
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:37
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:37
 
 #### Parameters
 
@@ -810,7 +407,7 @@ Map.has
 set(key, value): this
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:41
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.collection.d.ts:41
 
 Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
 
@@ -869,7 +466,7 @@ Map.set
 iterator: MapIterator<[K, V]>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:143
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:143
 
 Returns an iterable of entries in the map.
 
@@ -891,7 +488,7 @@ Map.[iterator]
 entries(): MapIterator<[K, V]>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:148
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:148
 
 Returns an iterable of key, value pairs for every entry in the map.
 
@@ -913,7 +510,7 @@ Map.entries
 keys(): MapIterator<K>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:153
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:153
 
 Returns an iterable of keys in the map
 
@@ -935,7 +532,7 @@ Map.keys
 values(): MapIterator<V>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:158
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:158
 
 Returns an iterable of values in the map
 
@@ -957,7 +554,7 @@ Map.values
 static groupBy<K, T>(items, keySelector): Map<K, T[]>
 ```
 
-Defined in: web/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2024.collection.d.ts:25
+Defined in: docs/node\_modules/.pnpm/typescript@5.7.3/node\_modules/typescript/lib/lib.es2024.collection.d.ts:25
 
 Groups members of an iterable according to the return value of the passed callback.
 
@@ -1044,3 +641,406 @@ A callback which will be invoked for each item in items.
 ```ts
 Map.groupBy
 ```
+
+***
+
+### filter()
+
+```ts
+filter(callback): Dictionary<K, V>
+```
+
+Defined in: [package/src/classes/dictionary.ts:31](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L31)
+
+Filters the entries of the dictionary based on the provided callback.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`value`, `key`, `dict`) => `boolean`
+
+</td>
+<td>
+
+A function to test each entry. Returns `true` to keep the entry, `false` otherwise.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`Dictionary`](/uncmd/reference/classes/dictionary/)\<`K`, `V`\>
+
+A new `Dictionary` with the filtered entries.
+
+***
+
+### find()
+
+```ts
+find(callback): undefined | V
+```
+
+Defined in: [package/src/classes/dictionary.ts:45](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L45)
+
+Finds the first value in the dictionary that satisfies the provided callback.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`value`, `key`, `dict`) => `boolean`
+
+</td>
+<td>
+
+A function to test each entry. Returns `true` for the desired entry.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`undefined` \| `V`
+
+The first value that satisfies the callback, or `undefined` if none do.
+
+***
+
+### every()
+
+```ts
+every(callback): boolean
+```
+
+Defined in: [package/src/classes/dictionary.ts:63](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L63)
+
+Tests whether all entries in the dictionary pass the provided callback.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`value`, `key`, `dict`) => `boolean`
+
+</td>
+<td>
+
+A function to test each entry. Returns `true` for entries that pass.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+`true` if all entries pass the callback, otherwise `false`.
+
+***
+
+### some()
+
+```ts
+some(callback): boolean
+```
+
+Defined in: [package/src/classes/dictionary.ts:79](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L79)
+
+Tests whether at least one entry in the dictionary passes the provided callback.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`value`, `key`, `dict`) => `boolean`
+
+</td>
+<td>
+
+A function to test each entry. Returns `true` for entries that pass.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+`true` if at least one entry passes the callback, otherwise `false`.
+
+***
+
+### reduce()
+
+```ts
+reduce<T>(callback, initial): T
+```
+
+Defined in: [package/src/classes/dictionary.ts:96](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L96)
+
+Reduces the dictionary's entries to a single value using the provided callback.
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`accumulator`, `value`, `key`, `dict`) => `T`
+
+</td>
+<td>
+
+A function to process each entry.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`initial`
+
+</td>
+<td>
+
+`T`
+
+</td>
+<td>
+
+The initial accumulator value.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`T`
+
+The result of the reduction.
+
+***
+
+### map()
+
+```ts
+map<T>(callback): Dictionary<K, T>
+```
+
+Defined in: [package/src/classes/dictionary.ts:112](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L112)
+
+Maps the dictionary's entries to a new `Dictionary` with transformed values.
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(`value`, `key`, `dict`) => `T`
+
+</td>
+<td>
+
+A function to transform each entry.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`Dictionary`](/uncmd/reference/classes/dictionary/)\<`K`, `T`\>
+
+A new `Dictionary` with the mapped values.
+
+***
+
+### first()
+
+```ts
+first(): undefined | V
+```
+
+Defined in: [package/src/classes/dictionary.ts:125](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L125)
+
+Retrieves the first value in the dictionary.
+
+#### Returns
+
+`undefined` \| `V`
+
+The first value, or `undefined` if the dictionary is empty.
+
+***
+
+### last()
+
+```ts
+last(): undefined | V
+```
+
+Defined in: [package/src/classes/dictionary.ts:134](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L134)
+
+Retrieves the last value in the dictionary.
+
+#### Returns
+
+`undefined` \| `V`
+
+The last value, or `undefined` if the dictionary is empty.
+
+***
+
+### clone()
+
+```ts
+clone(): Dictionary<K, V>
+```
+
+Defined in: [package/src/classes/dictionary.ts:143](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/dictionary.ts#L143)
+
+Creates a shallow copy of the dictionary.
+
+#### Returns
+
+[`Dictionary`](/uncmd/reference/classes/dictionary/)\<`K`, `V`\>
+
+A new `Dictionary` instance with the same entries, limit, and name.

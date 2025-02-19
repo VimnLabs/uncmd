@@ -5,7 +5,7 @@ prev: false
 title: "CommandData"
 ---
 
-Defined in: package/src/types.ts:24
+Defined in: [package/src/types.ts:24](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/types.ts#L24)
 
 Data to upload the command
 
@@ -22,12 +22,8 @@ Data to upload the command
 ### name
 
 ```ts
-name: string;
+name: APIApplicationCommand;
 ```
-
-Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:35
-
-1-32 character name; `CHAT_INPUT` command names must be all lowercase matching `^[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}$`
 
 #### Inherited from
 
@@ -37,33 +33,11 @@ Pick.name
 
 ***
 
-### name\_localizations?
-
-```ts
-optional name_localizations: null | Partial<Record<Locale, null | string>>;
-```
-
-Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:39
-
-Localization dictionary for the name field. Values follow the same restrictions as name
-
-#### Inherited from
-
-```ts
-Pick.name_localizations
-```
-
-***
-
 ### description
 
 ```ts
-description: string;
+description: APIApplicationCommand;
 ```
-
-Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:47
-
-1-100 character description for `CHAT_INPUT` commands, empty string for `USER` and `MESSAGE` commands
 
 #### Inherited from
 
@@ -73,15 +47,25 @@ Pick.description
 
 ***
 
-### description\_localizations?
+### name\_localizations
 
 ```ts
-optional description_localizations: null | Partial<Record<Locale, null | string>>;
+name_localizations: APIApplicationCommand;
 ```
 
-Defined in: package/node\_modules/.pnpm/discord-api-types@0.37.119/node\_modules/discord-api-types/payloads/v10/\_interactions/applicationCommands.d.ts:51
+#### Inherited from
 
-Localization dictionary for the description field. Values follow the same restrictions as description
+```ts
+Pick.name_localizations
+```
+
+***
+
+### description\_localizations
+
+```ts
+description_localizations: APIApplicationCommand;
+```
 
 #### Inherited from
 
