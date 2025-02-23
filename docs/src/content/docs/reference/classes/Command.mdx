@@ -5,7 +5,7 @@ prev: false
 title: "Command"
 ---
 
-Defined in: [package/src/classes/abstract.command.ts:29](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L29)
+Defined in: [package/src/classes/abstract.command.ts:29](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L29)
 
 Represents an abstract class of a command.
 
@@ -38,7 +38,7 @@ This is intended to be extended with other things including the function to exec
 new Command<Options>(options): Command<Options>
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:62](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L62)
+Defined in: [package/src/classes/abstract.command.ts:62](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L62)
 
 #### Parameters
 
@@ -77,7 +77,7 @@ Defined in: [package/src/classes/abstract.command.ts:62](https://github.com/King
 data: Options["data"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:33](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L33)
+Defined in: [package/src/classes/abstract.command.ts:33](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L33)
 
 Data to upload the command, like the name, the description and the localized names and descriptions
 
@@ -89,7 +89,7 @@ Data to upload the command, like the name, the description and the localized nam
 optional options: Options["options"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:39](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L39)
+Defined in: [package/src/classes/abstract.command.ts:39](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L39)
 
 Options to upload commands, this must be a fix and is only available for chat commands.
 
@@ -103,7 +103,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 type: Options["type"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:45](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L45)
+Defined in: [package/src/classes/abstract.command.ts:45](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L45)
 
 Type of command, defaults to `1`
 
@@ -117,7 +117,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 optional nsfw: Options["nsfw"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:49](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L49)
+Defined in: [package/src/classes/abstract.command.ts:49](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L49)
 
 Indicates whether the command is age-restricted, defaults to `false`
 
@@ -129,7 +129,7 @@ Indicates whether the command is age-restricted, defaults to `false`
 optional guilds: Snowflake[];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:53](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L53)
+Defined in: [package/src/classes/abstract.command.ts:53](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L53)
 
 Sets whether the command is to be uploaded only to one or several guilds by its id
 
@@ -141,7 +141,7 @@ Sets whether the command is to be uploaded only to one or several guilds by its 
 optional integration_types: Options["integration_types"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:57](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L57)
+Defined in: [package/src/classes/abstract.command.ts:57](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L57)
 
 Installation context(s) where the command is available, only for globally-scoped commands. Defaults to `GUILD_INSTALL ([0])`
 
@@ -153,7 +153,7 @@ Installation context(s) where the command is available, only for globally-scoped
 optional contexts: Options["contexts"];
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:61](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L61)
+Defined in: [package/src/classes/abstract.command.ts:61](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L61)
 
 Interaction context(s) where the command can be used, only for globally-scoped commands. By default, all interaction context types included for new commands `[0,1,2]`.
 
@@ -165,7 +165,7 @@ Interaction context(s) where the command can be used, only for globally-scoped c
 toJSON(): RESTPostAPIApplicationCommandsJSONBody
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:78](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L78)
+Defined in: [package/src/classes/abstract.command.ts:78](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L78)
 
 Convert the class so that it is suitable for uploading to the api.
 
@@ -185,7 +185,7 @@ JSON to be uploaded to the api
 isChatInput(): this is Command<Omit<Options, "type"> & { type: ChatInput }>
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:102](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L102)
+Defined in: [package/src/classes/abstract.command.ts:102](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L102)
 
 Checks if it is a text-based command that shows up when a user types `/`.
 
@@ -201,7 +201,7 @@ Checks if it is a text-based command that shows up when a user types `/`.
 isMessage(): this is Command<Omit<Options, "type"> & { type: Message }>
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:111](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L111)
+Defined in: [package/src/classes/abstract.command.ts:111](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L111)
 
 Checks if it is a UI-based command that shows up when you right click or tap on a message.
 
@@ -217,7 +217,7 @@ Checks if it is a UI-based command that shows up when you right click or tap on 
 isPrimaryEntryPoint(): this is Command<Omit<Options, "type"> & { type: PrimaryEntryPoint }>
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:120](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L120)
+Defined in: [package/src/classes/abstract.command.ts:120](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L120)
 
 Checks if it is a UI-based command that represents the primary way to invoke an app's Activity.
 
@@ -233,7 +233,7 @@ Checks if it is a UI-based command that represents the primary way to invoke an 
 isUser(): this is Command<Omit<Options, "type"> & { type: User }>
 ```
 
-Defined in: [package/src/classes/abstract.command.ts:129](https://github.com/KingsBeCattz/uncmd/blob/34f56ab7f4928c128676b89cb547e0ade417ea76/package/src/classes/abstract.command.ts#L129)
+Defined in: [package/src/classes/abstract.command.ts:129](https://github.com/KingsBeCattz/uncmd/blob/bad6bae9d56c0bb79ede2176419790e96cc812b7/package/src/classes/abstract.command.ts#L129)
 
 Checks if it is a UI-based command that shows up when you right click or tap on a user.
 
