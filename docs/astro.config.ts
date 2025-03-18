@@ -4,8 +4,6 @@ import starlight from '@astrojs/starlight';
 import { createStarlightTypeDocPlugin } from 'starlight-typedoc';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 
-import react from '@astrojs/react';
-
 const [typeDoc, typeDocSidebarGroup] = createStarlightTypeDocPlugin();
 
 // https://astro.build/config
@@ -77,7 +75,6 @@ export default defineConfig({
 					}
 				})
 			]
-		}),
-		react()
+		})
 	]
 });
